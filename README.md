@@ -6,4 +6,5 @@ If you want have only CI-workflow without pre-commit copy only directory `.githu
 
 pip install -r requirements.txt
 
+Add file `.pre-commit-config.yaml` to the main directory and write in terminal:
 pre-commit install
