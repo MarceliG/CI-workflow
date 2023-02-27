@@ -6,10 +6,13 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
       - uses: actions/checkout@v2
+
+      - name: Run Black
       - uses: psf/black@stable
         with:
           options: "--check --verbose"
           src: "."
           jupyter: true
-          version: "21.5b1"
+          version: "~= 22.0"
