@@ -21,10 +21,10 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
         
-    - name: Git configuration
-      run: |
-        git config core.autocrlf false
-        git reset --hard
+    # - name: Git configuration
+    #   run: |
+    #     git config core.autocrlf false
+    #     git reset --hard
 
     - name: Black-linter
       - uses: psf/black@stable
