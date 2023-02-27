@@ -1,5 +1,6 @@
-name: Lint Code Base
+# https://github.com/github/super-linter#supported-linters
 
+name: Lint Code Base
 
 on: [push, pull_request]
 
