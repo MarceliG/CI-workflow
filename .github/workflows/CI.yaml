@@ -12,6 +12,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+      - uses: psf/black@stable
 
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v4
@@ -25,7 +26,6 @@ jobs:
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
       - name: Code formater black
-      - uses: psf/black@stable
         with:
           options: "--check --verbose"
           src: "."
