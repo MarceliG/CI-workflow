@@ -25,19 +25,11 @@ jobs:
       run: |
         git config core.autocrlf false
         git reset --hard
-    - name: Build packages, and install the wheel
-      run: |
-        pip install build
-        python -m build
-        cd dist
-        python -m pip install flake8_black-*.whl
-        cd ..
-        # Wheel should now be installed
-        flake8 --version
-    - name: Run tests
-      run: |
-        # Unpack the tests from the sdist tar-ball
-        # (want to confirm the manifest was complete)
-        tar -zxvf dist/flake8-black-*.tar.gz
-        cd flake8-black-*/tests/
-        WIN="$([ "$RUNNER_OS" == "Windows" ];echo $?)" bash ./run_tests.sh
+
+    - name: Black-linter
+      - uses: psf/black@stable
+        with:
+          options: "--check --verbose"
+          src: "./src"
+          jupyter: true
+          version: "~= 22.0"
