@@ -1,4 +1,4 @@
-name: BLACK
+name: Lint
 
 on: [push, pull_request]
 
@@ -6,13 +6,9 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-      - uses: actions/checkout@v2
-
-      - name: Run Black
+      - uses: actions/checkout@v3
       - uses: psf/black@stable
         with:
           options: "--check --verbose"
           src: "."
-          jupyter: true
           version: "~= 22.0"
