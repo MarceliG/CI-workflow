@@ -2,11 +2,16 @@ def test_2():
     
     a     =  []
     
-    for i in range(10):
+    for i in range(10
+                   
+                   
+                   ):
         
         
         
         a.append(i       
+                 
+                 
                  
                  
                  
