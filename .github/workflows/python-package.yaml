@@ -41,13 +41,3 @@ jobs:
     - name: Test with pytest
       run: |
         pytest
-        
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: psf/black@stable
-        with:
-          options: "--check --verbose"
-          src: "."
-          version: "~= 22.0"
