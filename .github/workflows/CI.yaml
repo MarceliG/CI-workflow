@@ -27,7 +27,7 @@ jobs:
 
       - name: Code formater black
         run: |
-        black . --check --verbose
+          black . --check --verbose
 
       - name: Lint with flake8
         run: |
