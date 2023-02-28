@@ -2,16 +2,16 @@ from setuptools import find_packages, setup
 
 requirements = {
     "install": [
-        "pre-commit >=2.21.0",
-        "isort >= 5.12.0",
-        "flake8 >= 4.0.1",
-        "tox >= 4.4.6",
+        "tox >= 4.4.5",
     ],
     "ut": [
-        "pytest >= 6.2.5, < 7.0.0",
+        "pytest >= 6.2.5",
     ],
     "style": [
-        "black >= 22.12.0",
+        "black >= 22.10.0",
+        "flake8 >= 4.0.0",
+        "isort >= 5.10.0",
+        "mypy >= 1.0.0",
     ],
 }
 
