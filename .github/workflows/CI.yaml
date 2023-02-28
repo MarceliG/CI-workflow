@@ -38,7 +38,7 @@ jobs:
 
       - name: Imports module formater isort
         run: |
-          isort . --diff --check-only --color
+          isort . --diff --check-only 
 
       - name: Test with pytest
         run: |
