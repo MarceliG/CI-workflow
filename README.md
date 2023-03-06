@@ -1,9 +1,9 @@
-# Starter testing can implement in any project
-
-<p>
-  <a href="https://github.com/MarceliG/CI-workflow/actions"><img alt="Actions Status" src="https://github.com/psf/black/workflows/Test/badge.svg"></a>
-  <a href="https://github.com/MarceliG/CI-workflow/blob/main/LICENSE"><img alt="License: MIT" src="https://black.readthedocs.io/en/stable/_static/license.svg"></a>
+<p align="left">
+<a href="https://github.com/MarceliG/CI-workflow/actions"><img alt="Actions Status" src="https://github.com/psf/black/workflows/Test/badge.svg"></a>
+<a href="https://github.com/MarceliG/CI-workflow/blob/main/LICENSE"><img alt="License: MIT" src="https://black.readthedocs.io/en/stable/_static/license.svg"></a>
 </p>
+
+# Introduction to the project
 
 A project to show how to set up and use automated testing in Python. 
 
@@ -20,26 +20,33 @@ In this project the code is verified by:
 
 When you start a new project and want to use a different version eg. Python or any libraries you can create a virtual environment. 
 
-Tools that can be used:
-- [conda](https://docs.conda.io/en/latest/)
-- [virtualenv](https://github.com/pyenv/pyenv)
-- [venv](https://docs.python.org/3/library/venv.html)
+1. Chose your favorite virtual enviroment. 
+    
+    You can use:
+    - [conda](https://docs.conda.io/en/latest/)
+    - [pyenv](https://github.com/pyenv/pyenv)
+    - [venv](https://docs.python.org/3/library/venv.html)
 
-Create virtual enviroment [Recommended latest version Python]:
-```
-python3.11 -m venv .venv
-```
-Activate enviroment:
-```
-source .venv/bin/activate
-```
+2. Create virtualenv.
+    
+    Example with `venv`:
+    
+    ```python3.11 -m venv .venv```
+    
+    Activate enviroment:
+    
+    ```source .venv/bin/activate```
+
 
 ## Installation packages
+
 When you have virtual enviroment and all files from this repositories in your work directory you can install recommended libraries:
 ```
 pip install -r requirements.txt
 ```
-And check that everything is in order. Do this steps:
+
+## Initial launch
+
 1. ```pip install -e .``` - Install a project in editable mode (i.e. setuptools “develop mode”) from a local project path
 2. ```black src tests```
 3. ```isort src tests```
@@ -49,12 +56,5 @@ And check that everything is in order. Do this steps:
 7. ```tox``` - to create same virtual environments that are used by CI.
 
 
-
-
-
-
-### Additional informations
-First commit will spend long time (about 1min). If you don't have failed tests you can push your commit, if not changes your files and try again.
-
-## Use `tox` to create same virtual environments that are used by CI.
+## Usage of tox
 
