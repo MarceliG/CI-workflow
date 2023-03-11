@@ -47,14 +47,43 @@ pip install -r requirements.txt
 
 ## Initial launch
 
-1. ```pip install -e .``` - Install a project in editable mode (i.e. setuptools “develop mode”) from a local project path
-2. ```black src tests```
-3. ```isort src tests```
-4. ```flake8 src tests```
-5. ```mypy src tests```
-6. ```pytest```
-7. ```tox``` - to create same virtual environments that are used by CI.
+1. Install a project in editable mode (i.e. setuptools “develop mode”) from a local project path
+
+```
+pip install -e .
+``` 
+
+2. Run libraries
+
+```
+black src tests
+isort src tests
+flake8 src tests
+mypy src tests
+```
+
+3. Run python tests
+
+```
+pytest
+```
+
+4. Run tox
+
+```
+tox
+```
 
 
-## Usage of tox
+## What is tox
+
+Tox is a generic virtual environment management and test command line tool you can use for:
+ - checking your package builds and installs correctly under different environments (such as different Python implementations, versions or installation dependencies),
+ - running your tests in each of the environments with the test tool of choice,
+ - acting as a frontend to continuous integration servers, greatly reducing boilerplate and merging CI and shell-based testing.
+ 
+ ### Proposal to use tox
+ 
+If you make changes to your code and want to push it out to a remote repository use tox and make sure you've written your code great.
+ 
 
